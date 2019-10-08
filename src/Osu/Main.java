@@ -1,76 +1,40 @@
 package Osu;
 
-import java.util.Scanner;
-
-/**
- * The main application.
- *
- * @author Miko
- */
 public class Main {
 
     public static void main(String[] args) {
 
-		/*System.out.println("Hello, world!");
+    	System.out.println(introductionText());
 
-		OpticSeparation();
+		/*Person miko = new Person("David", "Miko", 20, new Address("Husova 1099", "Vratimov",73932));
 
-		// The biggest value of Integer
-		System.out.println(String.format("The biggest value of Integer is: %d", Integer.MAX_VALUE));
+		Person pospisil = new Person("Petr", "Popsisil", 21);
 
-		OpticSeparation();
+		pospisil.setAddress(new Address("Sladecek 69", "VSB", 420));
 
-		// Initializes a scanner for getting input from user
-		Scanner scanner = new Scanner(System.in);
 
-		// Gets the first number
-		System.out.print("Enter a first number: ");
-		int firstNumber = scanner.nextInt();
 
-		// Gets the second number
-		System.out.print("Enter a second number: ");
-		int secondNumber = scanner.nextInt();
+		System.out.println(miko);
+		System.out.println(pospisil);*/
 
-		// Adds two numbers
-		int result = firstNumber + secondNumber;
 
-		// Prints the result
-		System.out.println(String.format("The result of '%d + %d' is: %d", firstNumber, secondNumber, result));
+		// Instantiates the planets with its satellites
+		Planet firstPlanet = new Planet("MikovaPlaneta", "Nejlepsi", new Satellite("MikuvMesic",69));
+		Planet secondPlanet = new Planet("SpatnaPlaneta", "Nejhorsi", new Satellite("SpatnyMesic",-1));
 
-		OpticSeparation();
+		// Instantiates a star with planets
+		Star myStar = new Star("dobra hvezda", 50, firstPlanet, secondPlanet);
 
-		// Gets the third number
-		System.out.print("Enter a third number: ");
-		int thirdNumber = scanner.nextInt();
+		//System.out.println(firstPlanet.getMoon().getReport());
+		//System.out.println(firstPlanet);
 
-		// Gets the fourth number
-		System.out.print("Enter a fourth number: ");
-		int fourthNumber = scanner.nextInt();
+		System.out.println(myStar);
+    }
 
-		// Divides two numbers
-		double secondResult = ((double)thirdNumber / (double)fourthNumber);
-
-		// Prints the result
-		System.out.println(String.format("The result of '%d / %d' is: %f", thirdNumber, fourthNumber, secondResult));*/
-
-		/*Car myCar = new Car("Wolkswagenn", "Golf", "Grey", 15, 2500, 1500);
-
-		System.out.println(myCar);*/
-
-		Game firstGame = new Game("The Witcher 3: Wild Hunt", "RPG", "Playstation 4", 93, "Game of the Year");
-		Game secondGame = new Game("Assassin's Creed: Odyssey", "RPG", "Playstation 4", 83, null);
-
-		System.out.println(firstGame);
-		System.out.println(secondGame);
-
-	}
-
-	/**
-	 * Separates text in console.
+    /**
+	 * Gets the introduction text of the application.
 	 */
-	private static void OpticSeparation() {
-		System.out.println();
-		System.out.println("-------------------------------------");
-		System.out.println();
+    private static String introductionText() {
+    	return "===============================\n\n\tALG1 - 08. 10. 2019\n\n===============================\n";
 	}
 }
